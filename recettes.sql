@@ -54,7 +54,12 @@ INSERT INTO `ingredient` (`id_ingredient`, `ingredient_name`, `price`) VALUES
 	(10, 'Riz', 1.8),
 	(11, 'Chocolat', 4),
 	(12, 'Sucre', 0.8),
-	(13, 'Citron', 0.5);
+	(13, 'Citron', 0.5),
+	(14, 'Poulet', 5),
+	(15, 'Crème fraîche', 2.5),
+	(16, 'Curry en poudre', 1.5),
+	(17, 'Lait de coco', 3),
+	(18, 'Riz', 1.8);;
 
 -- Listage de la structure de table recette_emmanuel. recipe
 CREATE TABLE IF NOT EXISTS `recipe` (
@@ -79,7 +84,10 @@ INSERT INTO `recipe` (`id_recipe`, `recipe_name`, `preparation_time`, `instructi
 	(7, 'Tarte au chocolat', 50, 'Préparer une pâte, ajouter la ganache au chocolat, cuire au four.', 3),
 	(8, 'Soupe de légumes', 25, 'Faire bouillir les légumes dans de l\'eau, mixer pour obtenir une consistance lisse.', 2),
 	(9, 'Crêpes au sucre', 20, 'Préparer la pâte à crêpes, cuire dans une poêle et saupoudrer de sucre.', 3),
-	(10, 'Tiramisu', 30, 'Alterner couches de biscuits imbibés de café et de mascarpone.', 3);
+	(10, 'Tiramisu', 30, 'Alterner couches de biscuits imbibés de café et de mascarpone.', 3),
+	(12, 'Poulet au curry', 30, 'Faire revenir le poulet avec des épices curry, ajouter de la crème fraîche, du lait de coco et laisser mijoter jusqu\'à ce que la sauce épaississe. Servir avec du riz.', 2),
+	(13, 'Pâtes à la carbonara', 20, 'Preparer, manger.', 2),
+	(13, 'Tasse d\'eau chaude', 1, 'Verser de l\'eau chaude dans une tasse', 3);
 
 -- Listage de la structure de table recette_emmanuel. recipe_ingredients
 CREATE TABLE IF NOT EXISTS `recipe_ingredients` (
@@ -119,7 +127,12 @@ INSERT INTO `recipe_ingredients` (`quantity`, `unit`, `id_recipe`, `id_ingredien
 	(100, 'grammes', 9, 3),
 	(20, 'grammes', 9, 12),
 	(150, 'grammes', 10, 11),
-	(100, 'grammes', 10, 12);
+	(100, 'grammes', 10, 12),
+	(500, 'grammes', 11, 7),
+	(200, 'grammes', 11, 4),
+	(2, 'cuillères', 12, 14),
+	(200, 'ml', 12, 15),
+	(200, 'grammes', 12, 10);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
